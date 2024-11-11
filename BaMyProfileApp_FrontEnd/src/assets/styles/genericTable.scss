@@ -1,0 +1,73 @@
+.generic-table-container {
+  padding: 20px;
+  margin: auto;
+  max-width: 1000px; // Tabloya maximum genişlik değeri verildi.
+  overflow-x: auto; /* Geniş tabloların taşmasını önlemek için tablo altına kaydırma çubuğu eklendi. */
+  box-sizing: border-box; /* Tablonun sayfa içinde kalması sağlandı. */
+  text-align: center;
+}
+
+.generic-table {
+  margin: auto;
+  border-collapse: collapse;
+  font-family: "Arial", sans-serif;
+  color: #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  thead {
+    background-color: #67C6E3;
+
+    th {
+      padding: 12px;
+      border: 1px solid #ccc;
+      text-align: left;
+      font-weight: normal;
+    }
+  }
+
+  tbody {
+    tr {
+      background-color: #DFF5FF;
+      transition: background-color 0.3s;
+      /* Satırlarda imleç ile gezerken geçiş efekti ile animasyon sağlandı. */
+      &:hover {
+        background-color: rgb(229, 248, 248);
+      }
+
+      td {
+        padding: 12px;
+        border: 1px solid #ccc;
+      }
+    }
+  }
+
+  th, td {
+    padding: 12px;
+    text-align: left;
+  }
+
+  /* Background ve tablo başlık renkleri ayarlandı. */
+  th {
+    background-color: #67C6E3;
+  }
+
+  tr {
+    background-color: #DFF5FF;
+  }
+
+  /* Responsive yapı için td, th ayarları eklendi. */
+  @media (max-width: 768px) {
+    th, td {
+      padding: 8px;
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    th, td {
+      padding: 6px;
+      font-size: 12px;
+    }
+  }
+}

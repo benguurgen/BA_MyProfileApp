@@ -1,0 +1,203 @@
+$footer-bg-color: #075985;
+$footer-text-color: #ffffff;
+$footer-text-hover: #bceaff;
+
+.footer-general-body {
+  width: 100%;
+  background-color: #67c6e3;
+}
+
+.footer {
+  overflow: hidden;
+  z-index: 3;
+  background-color: $footer-bg-color;
+  color: $footer-text-color;
+  padding: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 2px solid $footer-bg-color;
+
+  .footer-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: $footer-bg-color;
+
+    .footer-section {
+      flex: 1;
+      min-width: 150px; /* Minimum genişlik optimize edildi */
+      margin: 0.5rem;
+      background-color: $footer-bg-color;
+      text-align: center;
+
+      h3 {
+        margin-bottom: 0.3rem;
+        color: $footer-text-color;
+        font-weight: bold;
+        font-size: 0.95rem; /* Başlık boyutu biraz küçültüldü */
+      }
+
+      p,
+      a {
+        color: $footer-text-color;
+        text-decoration: none;
+        font-size: 0.85rem; /* Metin boyutu optimize edildi */
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $footer-text-hover;
+        }
+      }
+
+      .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 0.25rem; /* İkonlar arasındaki boşluk optimize edildi */
+        margin-top: 0.25rem;
+
+        a {
+          font-size: 1.1rem; /* Sosyal medya ikonlarının boyutu optimize edildi */
+          color: $footer-text-color;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: $footer-text-hover;
+          }
+        }
+      }
+    }
+
+    .navigation-section {
+      .nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem; /* Linkler arasındaki boşluk optimize edildi */
+
+        p,
+        .nav-link {
+          color: $footer-text-color;
+          text-decoration: none;
+          font-size: 0.85rem; /* Linklerin boyutu optimize edildi */
+          padding: 0;
+          background-color: $footer-bg-color;
+          border-radius: 0;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: $footer-text-hover;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    margin-top: 0.4rem; /* Alt kısım için yukarıdan mesafe minimuma indirildi */
+    text-align: center;
+
+    p {
+      margin: 0;
+      color: $footer-text-color;
+      font-size: 0.7rem; /* Alt bilgi metni boyutu optimize edildi */
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .footer-container {
+      max-width: 95%; /* Büyük ekranlarda genişlik optimize edildi */
+    }
+  }
+
+  @media (max-width: 992px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .footer-section,
+    .navigation-section {
+      margin-bottom: 0.5rem;
+      width: 100%; /* Her bir section tam genişlikte olacak */
+    }
+  }
+
+  @media (max-width: 768px) {
+    .footer-container {
+      padding: 1rem;
+      align-items: center;
+      text-align: center;
+    }
+
+    .footer-section,
+    .navigation-section {
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-section h3 {
+      font-size: 0.875rem; /* Küçük ekranlar için başlık boyutu optimize edildi */
+    }
+
+    .footer-section p,
+    .footer-section a,
+    .navigation-section .nav-link {
+      font-size: 0.75rem; /* Küçük ekranlar için metin boyutu optimize edildi */
+    }
+  }
+
+  @media (max-width: 576px) {
+    .footer-container {
+      padding: 0.5rem;
+    }
+
+    .footer-section,
+    .navigation-section {
+      margin-bottom: 0.3rem;
+      width: 100%;
+    }
+
+    .footer-section h3 {
+      font-size: 0.8rem; /* Mobil ekranlar için başlık boyutu optimize edildi */
+    }
+
+    .footer-section p,
+    .footer-section a,
+    .navigation-section .nav-link {
+      font-size: 0.7rem; /* Mobil ekranlar için metin boyutu optimize edildi */
+    }
+
+    .footer-bottom p {
+      font-size: 0.65rem; /* Alt bilgi metni boyutu optimize edildi */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .footer-container {
+      padding: 0.5rem;
+    }
+
+    .footer-section,
+    .navigation-section {
+      margin-bottom: 0.25rem;
+      width: 100%;
+    }
+
+    .footer-section h3 {
+      font-size: 0.75rem; /* Çok küçük ekranlar için başlık boyutu optimize edildi */
+    }
+
+    .footer-section p,
+    .footer-section a,
+    .navigation-section .nav-link {
+      font-size: 0.65rem; /* Çok küçük ekranlar için metin boyutu optimize edildi */
+    }
+
+    .footer-bottom p {
+      font-size: 0.6rem; /* Alt bilgi metni boyutu optimize edildi */
+    }
+  }
+}

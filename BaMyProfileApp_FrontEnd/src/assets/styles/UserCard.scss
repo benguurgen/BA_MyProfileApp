@@ -1,0 +1,173 @@
+.user-card-container {
+  width: 90%;
+  max-width: 300px;
+  background-color: #67c6e3;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  margin: 1%;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.5s ease, width 0.5s ease, background-color 0.5s ease;
+
+  &.expanded {
+    width: 90vw;
+    max-width: 1200px;
+    background-color: #67c6e3;
+    z-index: 1000;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 20px;
+    overflow-y: auto;
+  }
+
+  .user-card-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .user-card-image-container {
+    width: 100%;
+    padding-top: 75%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  .user-card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
+
+  .user-card-body {
+    padding: 5%;
+    text-align: left;
+    flex: 1;
+
+    .user-card-name {
+      font-size: 1.75rem;
+      margin: 10px 0;
+      text-align: center;
+    }
+
+    .user-card-info {
+      font-size: 0.90rem;
+      margin: 5px 0;
+    }
+  }
+
+  .delete,
+  .edit,
+  .details {
+    position: absolute;
+    height: 100%;
+    cursor: pointer;
+    width: 20px;
+    border: none;
+    transition: 0.5s;
+    opacity: 0;
+    font-size: 20px;
+    color: white;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .delete {
+    left: 0;
+    border-radius: 10px 0 0 10px;
+    background-color: rgba(255, 0, 0, 0.7);
+
+    &:hover {
+      width: 50%;
+    }
+  }
+
+  .edit {
+    right: 0;
+    border-radius: 0 10px 10px 0;
+    background-color: rgba(255, 166, 0, 0.7);
+
+    &:hover {
+      width: 50%;
+    }
+  }
+
+  .details {
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    background-color: rgba(223, 245, 255, 0.568);
+
+    &:hover {
+      height: 41.9%;
+      opacity: 1;
+    }
+  }
+
+  &.expanded .delete,
+  &.expanded .edit,
+  &.expanded .details {
+    display: none;
+  }
+}
+//
+@media (max-width: 768px) {
+  .user-card-container {
+    max-width: 90%;
+    &.expanded {
+      flex-direction: column;
+      width: 90vw;
+      height: 90vh;
+      padding: 10px;
+    }
+
+    .user-card-name {
+      font-size: 0.9rem;
+    }
+
+    .user-card-info {
+      font-size: 0.7rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .user-card-container {
+    max-width: 90%;
+    &.expanded {
+      flex-direction: column;
+      width: 90vw;
+      height: 90vh;
+      padding: 10px;
+    }
+
+    .user-card-image-container {
+      padding-top: 100%;
+    }
+
+    .user-card-name {
+      font-size: 0.9rem;
+    }
+
+    .user-card-info {
+      font-size: 0.7rem;
+    }
+  }
+}

@@ -1,0 +1,307 @@
+$sidebar-bg-color: #ffffff;
+$sidebar-text-color: #666464;
+$sidebar-text-hover: #081a6bb3;
+$sidebar-menu-hover-color: #67c6e3;
+$sidebar-menu-color: #075985;
+
+.container {
+  display: flex;
+  position: relative;
+  color: $sidebar-text-hover;
+
+  .container-body {
+    width: 100%;
+    margin-left: 175px; /* Varsayılan sidebar genişliği */
+    transition: margin-left 0.3s ease;
+    align-items: center; 
+    
+
+    
+  }
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 175px;
+  color: $sidebar-menu-color;
+  background-color: $sidebar-bg-color;
+  font-size: 16px; /* Yazı boyutunu biraz küçülttük */
+  height: 100vh;
+  transition: 0.3s all;
+  position: fixed;
+  left: 0;
+  overflow-y: auto;
+  z-index: 10;
+
+ .icon-container{
+  
+    max-width: 5px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+    margin: 3px;
+    padding-right: 6px;
+    padding-left: 10px;
+    
+  }
+
+
+
+  &.wrap {
+    width: 60px;
+    overflow: hidden;
+    justify-content: start;
+    
+    
+    .container-body {
+      margin-left: 60px;
+    }
+
+    li {
+      cursor: pointer;
+      min-width: 30px;
+      font-size: 14px; /* Yazı boyutunu küçülttük */
+      border-radius: 0;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      
+      span {
+        opacity: 0;
+        display: none;
+      }
+    }
+  }
+
+  .logo-sidebar {
+    margin-top: 8px;
+    margin-bottom: -50px;
+    width: 100%;
+    height: 75px;
+    padding-left: 19px;
+    
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0;
+    margin: 0;
+    /*align-items: center; */ /* Hamburger menü kapalıyken tüm logoları hizaladık */
+    
+      
+    li {
+      border-radius: 0px 12px 12px 0;
+      padding: 0.4rem 1rem; /* Paddingleri biraz daha küçülttük */
+      font-size: 15px;
+      font-weight: 500;
+      display: flex;
+      /*align-items: center;*/
+      min-width: 133px;
+      color: $sidebar-text-color;
+      padding-left: 13px;
+      
+      span {
+        padding: 0 0.4rem;
+        font-size: 13px;
+      }
+    }
+
+    li.active {
+      background-color: $sidebar-menu-hover-color;
+      color: $sidebar-text-hover;
+    }
+
+    li:hover {
+      cursor: pointer;
+      background-color: $sidebar-menu-hover-color;
+      color: $sidebar-bg-color;
+    }
+  }
+  
+}
+
+.sidebar ul li {
+  position: relative; 
+}
+
+/* NavLink 100% genişletilerek tıklanabilir oldu */
+.sidebar ul li a {
+  display: flex;
+  width: 100%;
+  height: 100%; 
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.sidebar ul li a:hover {
+  background-color: $sidebar-menu-hover-color;
+  color: $sidebar-bg-color; 
+}
+
+/* Responsive Ayarlar */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 150px;
+  }
+
+  .container-body {
+    margin-left: 150px;
+  }
+
+  .sidebar.wrap {
+    width: 50px;
+
+    .container-body {
+      margin-left: 50px;
+    }
+
+    li {
+      font-size: 13px;
+    }
+  }
+
+  ul {
+    gap: 3px;
+
+    li {
+      padding: 0.35rem 0.8rem;
+      font-size: 13px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 120px;
+   
+
+  }
+
+  .container-body {
+    margin-left: 120px;
+  }
+
+  .sidebar.wrap {
+    width: 50px;
+
+    .container-body {
+      margin-left: 50px;
+    }
+
+    li {
+      font-size: 12px;
+    }
+  }
+
+  ul {
+    gap: 3px;
+    font-size: 12px;
+
+    li {
+      padding: 0.35rem 0.75rem;
+      font-size: 12px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .sidebar {
+    width: 100px;
+  }
+
+  .container-body {
+    margin-left: 100px;
+  }
+
+  .sidebar.wrap {
+    width: 45px;
+
+    .container-body {
+      margin-left: 45px;
+    }
+
+    li {
+      font-size: 11px;
+    }
+  }
+
+  ul {
+    gap: 2px;
+    font-size: 11px;
+
+    li {
+      padding: 0.3rem 0.7rem;
+      font-size: 11px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 90px;
+  }
+
+  .container-body {
+    margin-left: 90px;
+    
+  }
+
+  .sidebar.wrap {
+    width: 40px;
+
+    .container-body {
+      margin-left: 40px;
+    }
+
+    li {
+      font-size: 10px;
+    }
+  }
+
+  ul {
+    gap: 1px;
+    font-size: 10px;
+
+    li {
+      padding: 0.25rem 0.5rem;
+      font-size: 10px;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .sidebar {
+    width: 80px;
+  }
+
+  .container-body {
+    margin-left: 80px;
+  }
+
+  .sidebar.wrap {
+    width: 35px;
+
+    .container-body {
+      margin-left: 35px;
+    }
+
+    li {
+      font-size: 9px;
+    }
+  }
+
+  ul {
+    gap: 1px;
+    font-size: 9px;
+
+    li {
+      padding: 0.2rem 0.4rem;
+      font-size: 9px;
+    }
+  }
+}

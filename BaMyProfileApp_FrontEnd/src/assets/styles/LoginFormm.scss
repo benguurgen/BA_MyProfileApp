@@ -1,0 +1,268 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+$openSans: "Open Sans", Helvetica, Arial, sans-serif;
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  //font-size: 68.5%;
+  overflow: hidden;
+  font-family: $openSans;
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 768px) {
+  html,
+  body {
+    font-size: 90%;
+  }
+}
+
+.cont {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.demo {
+  width: 100%;
+  max-width: 37rem;
+  background: rgba(237, 237, 238, 0.081);
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(20px);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.login__check {
+  width: 100%;
+  max-width: 20rem;
+  height: 20rem;
+  background: url("../images/logo.png") no-repeat center center;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.login__form {
+  width: 350px;
+  height: 90%;
+
+  .form-login {
+    display: flex;
+    flex-direction: column;
+
+    .login__row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 0.5rem;
+      background: linear-gradient(145deg, #4a6086, #465267);
+      position: relative;
+      
+      .login__icon {
+        margin-right: 1.5rem; // Sağdan boşluk artırıldı
+        margin-left: 0.5rem;  // Soldan boşluk eklendi
+        width: 2rem;
+        height: 2rem;
+        color: #fff;
+    
+        svg {
+          fill: #fcf2f2;
+        }
+      }
+      
+      .login__input {
+        flex: 1; 
+        padding: 1rem;
+        font-size: 1.05rem;
+        color: #fdfcfd;
+        background: transparent;
+        border: none;
+        
+        &::placeholder {
+          color: #ddd;
+        }
+        
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    .input-password {
+      position: relative;
+      
+
+      .password-icons {
+        position: absolute;
+        right: 1; /* Boşluğu artırdık */
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        color: #e7d2d2;
+       
+      }
+    }
+
+    .login_checkbox {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+
+      .remember-me-checkbox {
+        width: 1.6rem;
+        height: 1.6rem;
+        margin-right: 1rem;
+      }
+
+      .rememberr {
+        color: #dff5ff;
+        font-size: 1.2rem;
+      }
+    }
+
+    .error-message {
+      color: red;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .login__submit {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.5rem;
+      color: rgba(255, 255, 255, 0.8);
+      background: #5356ff;
+      border: none;
+      border-radius: 3rem;
+      cursor: pointer;
+      overflow: hidden;
+      transition: background 0.3s;
+
+      &:disabled {
+        background: #999;
+        cursor: not-allowed;
+      }
+
+      &:hover:not(:disabled) {
+        background: #67c6e3;
+      }
+    }
+
+    .login__signup {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: #aba8ae;
+
+      a {
+        color: #fff;
+        cursor: pointer;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .demo {
+    max-width: 90%;
+    padding: 1.5rem;
+
+    .login__check {
+      width: 100%;
+      max-width: 20rem;
+      height: 20rem;
+      background: url("../images/logo.png") no-repeat center center;
+      background-size: contain;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+    }
+
+    .login__form {
+      .login__row {
+        flex-direction: column;
+        align-items: flex-start;
+
+        .login__icon,
+        .login__input {
+          width: 100%;
+          margin-bottom: 1rem;
+        }
+      }
+
+      .login_checkbox {
+        flex-direction: column;
+        align-items: flex-start;
+
+        .rememberr {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .demo {
+    max-width: 95%;
+    padding: 1rem;
+
+    .login__check {
+      width: 100%;
+      max-width: 20rem;
+      height: 20rem;
+      background: url("../images/logo.png") no-repeat center center;
+      background-size: contain;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+    }
+
+    .login__form {
+      .login__row {
+        padding: 0.5rem 0;
+
+        .login__input {
+          font-size: 1.2rem;
+        }
+      }
+
+      .login__submit {
+        font-size: 1.2rem;
+      }
+
+      .login__signup {
+        font-size: 1rem;
+      }
+    }
+  }
+}

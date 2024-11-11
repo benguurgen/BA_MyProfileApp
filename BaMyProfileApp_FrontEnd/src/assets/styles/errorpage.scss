@@ -1,0 +1,223 @@
+$button-colour: #075985;
+$button-hover-colour: #0056b3;
+$button-text-colour: white;
+
+//404 Error CSS
+.error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    margin-top: 100px;
+  
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+  
+    .error-title {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+  
+    .error-message {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      padding: 0 20px;
+    }
+  
+    .error-button-container {
+        margin-top: 20px; 
+      }
+      
+      .error-button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        background-color: $button-colour;
+        color: $button-text-colour;
+        border-radius: 5px;
+      }
+      
+      .error-button:hover {
+        background-color: #0056b3; 
+      }
+  }
+  
+@media (max-height: 800px) {
+  .error-container{
+    background-color: rgb(255, 255, 255);
+    margin-top: 0;
+    height: auto;
+    min-height: 100vh;
+  }
+  
+}
+//--------------------
+// .error-container {
+//     text-align: center;
+//     padding: 50px;
+//   }
+  
+//   .error-title {
+//     font-size: 48px;
+//     color: #333;
+//   }
+  
+//   .error-message {
+//     font-size: 18px;
+//     color: #666;
+//   }
+  
+//   .error-button-container {
+//     margin-top: 20px;
+//   }
+  
+//   .error-button {
+//     margin: 10px;
+//     padding: 10px 20px;
+//     font-size: 16px;
+//     color: #fff;
+//     background-color: #007BFF;
+//     border: none;
+//     border-radius: 5px;
+//     cursor: pointer;
+  
+//     &:hover {
+//       background-color: #6c7e92;
+//     }
+// }
+
+//403 Access Error CSS
+
+.forbidden-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 75vh; 
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  margin-top: 100px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+.forbidden-title {
+    font-size: 2rem;
+    margin-bottom: 10px; 
+}
+
+.forbidden-message {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.forbidden-button-container {
+  margin-top: 20px; 
+}
+
+.forbidden-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: $button-colour;
+  color: $button-text-colour;
+  border-radius: 5px;
+}
+
+.forbidden-button:hover {
+  background-color: $button-hover-colour; 
+}
+@media (max-height: 800px) {
+  .forbidden-container{
+    background-color: rgb(255, 255, 255);
+    margin-top: 0;
+    height: auto;
+    min-height: 100vh;
+  }
+  
+}
+//------------------------------------
+// .forbidden-container {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     height: 100vh;
+//     text-align: center;
+    
+//     img {
+//       max-width: 100%;
+//       height: auto;
+//       margin-bottom: 20px;
+//     }
+    
+//     .forbidden-title {
+//       font-size: 2rem;
+//       margin-bottom: 10px;
+//     }
+  
+//     .forbidden-message {
+//       font-size: 1.2rem;
+//       margin-bottom: 20px;
+//     }
+  
+//     .forbidden-button-container {
+//       display: flex;
+//       justify-content: center;
+//     }
+  
+//     .forbidden-button {
+//       padding: 10px 20px;
+//       font-size: 1rem;
+//       cursor: pointer;
+//     }
+//   }
+  
+// .forbidden-container {
+//     text-align: center;
+//     padding: 50px;
+//     img{
+
+//     }
+//   }
+  
+//   .forbidden-title {
+//     font-size: 48px;
+//     color: #D9534F; 
+//   }
+  
+//   .forbidden-message {
+//     font-size: 18px;
+//     color: #666;
+//   }
+  
+//   .forbidden-button-container {
+//     margin-top: 20px;
+//   }
+  
+//   .forbidden-button {
+//     margin: 10px;
+//     padding: 10px 20px;
+//     font-size: 16px;
+//     color: #fff;
+//     background-color: #D9534F; 
+//     border: none;
+//     border-radius: 5px;
+//     cursor: pointer;
+  
+//     &:hover {
+//       background-color: #C9302C;
+//     }
+//   }
+  
+  

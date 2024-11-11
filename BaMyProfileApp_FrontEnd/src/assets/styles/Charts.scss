@@ -1,0 +1,39 @@
+.chart-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    flex-direction: column; /* Küçük ekranlarda grafiklerin üst üste binmesini sağlar */
+    width: 90%;
+    padding: 10px;
+  }
+
+  @media (max-width: 480px) {
+    width: 80%;
+    padding: 5px;
+  }
+
+  .line-item, .bar-item, .pie-item {
+    background-color: transparent; 
+    border: 1px solid rgba(255, 255, 255, 0.7); 
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4); 
+    border-radius: 8px; 
+    padding: 10px; 
+  }
+
+  .line-item, .bar-item {
+    flex: 1;
+    margin: 7px;
+    margin-left: 130px;
+    width: 400px;
+  }
+
+  .pie-item {
+    width: 350px;
+    margin-right: 200px;
+  }
+}

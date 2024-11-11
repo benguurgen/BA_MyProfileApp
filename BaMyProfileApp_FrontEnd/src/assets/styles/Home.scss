@@ -1,0 +1,181 @@
+$background-color: #f8fafc;
+$text-color: #f1e1e1;
+$hover-shadow-color: #646cffaa;
+$react-hover-shadow-color: #61dafbaa;
+$footer-bg-color: #67c6e3;
+$footer-text-color: #4535c1;
+$footer-hover-color: #dff5ff;
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: $background-color;
+}
+
+.sidebartable {
+  display: flex;
+  flex-direction: row;
+
+  .sidebarcontainer {
+    width: 60px;
+    z-index: 2;
+
+    @media (max-width: 768px) {
+      width: 50px; /* Küçük ekranlar için genişlik azaltıldı */
+    }
+
+    @media (max-width: 480px) {
+      width: 40px; /* Daha küçük ekranlar için genişlik daha da azaltıldı */
+    }
+  }
+}
+
+.main {
+  flex-grow: 1;
+  overflow: auto;
+}
+
+.main-layout {
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.content-container {
+  flex-grow: 1;
+  padding-top: 20px;
+  padding-left: 20px;
+  background-color: $background-color;
+  box-sizing: border-box;
+  height: calc(
+    100vh - 200px
+  ); /* Footer'ı ve üst kısmı hesaba katarak ayarlanmış yükseklik */
+  overflow: auto;
+
+  @media (max-width: 768px) {
+    padding-top: 15px; /* Küçük ekranlar için padding azaltıldı */
+    padding-left: 15px;
+    height: calc(100vh - 180px); /* Küçük ekranlar için yükseklik ayarlandı */
+  }
+
+  @media (max-width: 480px) {
+    padding-top: 10px; /* Daha küçük ekranlar için padding daha da azaltıldı */
+    padding-left: 10px;
+    height: calc(
+      100vh - 150px
+    ); /* Daha küçük ekranlar için yükseklik ayarlandı */
+  }
+}
+
+
+.footer {
+  background-color: $footer-bg-color;
+  color: $footer-text-color;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 2px solid $footer-text-color;
+  margin-top: auto;
+  width: 100%;
+
+  .footer-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    background-color: $footer-bg-color;
+
+    .footer-section,
+    .navigation-section {
+      flex: 1;
+      min-width: 200px;
+      margin: 0.5rem;
+      background-color: $footer-bg-color;
+      text-align: center;
+
+      @media (max-width: 768px) {
+        min-width: 150px; /* Küçük ekranlar için minimum genişlik azaltıldı */
+      }
+
+      @media (max-width: 480px) {
+        min-width: 120px; /* Daha küçük ekranlar için minimum genişlik daha da azaltıldı */
+      }
+    }
+  }
+
+  .footer-bottom {
+    margin-top: 0.5rem;
+    text-align: center;
+
+    p {
+      margin: 0;
+      color: $footer-text-color;
+
+      @media (max-width: 768px) {
+        font-size: 0.75rem; /* Küçük ekranlar için font boyutu azaltıldı */
+      }
+
+      @media (max-width: 480px) {
+        font-size: 0.7rem; /* Daha küçük ekranlar için font boyutu daha da azaltıldı */
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    padding: 1.5rem 0; /* Orta boyutlu ekranlar için padding optimize edildi */
+
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .footer-section,
+    .navigation-section {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 1.5rem 0; /* Küçük ekranlar için padding optimize edildi */
+
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .footer-section,
+    .navigation-section {
+      margin-bottom: 0.5rem;
+      width: 100%;
+      min-width: auto;
+    }
+
+    .footer-section h3,
+    .footer-section p,
+    .navigation-section .nav-link {
+      font-size: 0.85rem; /* Küçük ekranlar için metin boyutları küçültüldü */
+    }
+  }
+
+  @media (max-width: 576px) {
+    padding: 1rem 0; /* En küçük ekranlar için padding optimize edildi */
+
+    .footer-section h3,
+    .footer-section p,
+    .navigation-section .nav-link {
+      font-size: 0.8rem; /* En küçük ekranlar için metin boyutları optimize edildi */
+    }
+
+    .footer-bottom p {
+      font-size: 0.75rem; /* Alt bilgi metni boyutu optimize edildi */
+    }
+  }
+}

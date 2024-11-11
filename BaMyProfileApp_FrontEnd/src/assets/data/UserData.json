@@ -1,0 +1,142 @@
+{
+  "users": [
+    {
+      "baseUser": {
+        "firstName": "Kutay",
+        "lastName": "Taşel",
+        "email": "kutaytasel@gmail.com",
+        "phoneNumber": "+905555555555",
+        "gender": "Male",
+        "dateOfBirth": "1997-04-17",
+        "image": "/src/assets/images/erkek.jpg",
+        "address": "Çankaya, Ankara, Turkey"
+      },
+      "candidate": {
+        "workingStatus": "Working",
+        "applications": 5
+      },
+      "experiences": [
+        {
+          "companyName": "ABC Corp",
+          "dateOfStart": "2020-01-01",
+          "dateOfEnd": "2022-01-01",
+          "position": "Software Engineer",
+          "description": "Developed and maintained web applications."
+        },
+        {
+          "companyName": "XYZ Ltd",
+          "dateOfStart": "2018-01-01",
+          "dateOfEnd": "2019-12-31",
+          "position": "Junior Developer",
+          "description": "Assisted in the development of web applications."
+        }
+      ],
+      "certificates": [
+        {
+          "name": "Certified Kubernetes Administrator",
+          "certificateDate": "2021-06-01",
+          "description": "Certification for Kubernetes administration.",
+          "achievementStatus": true
+        },
+        {
+          "name": "AWS Certified Solutions Architect",
+          "certificateDate": "2020-05-01",
+          "description": "Certification for AWS solutions architecture.",
+          "achievementStatus": true
+        }
+      ]
+    },
+    {
+      "baseUser": {
+        "firstName": "Melike",
+        "lastName": "Coşkun",
+        "email": "melikecoskun@gmail.com",
+        "phoneNumber": "+905555555555",
+        "gender": "Female",
+        "dateOfBirth": "1992-02-02",
+        "image": "/src/assets/images/employeekadin.jpg",
+        "address": "Çankaya, Ankara, Turkey"
+      },
+      "candidate": {
+        "workingStatus": "Not Working",
+        "applications": 2
+      },
+      "experiences": [
+        {
+          "companyName": "DEF Inc",
+          "dateOfStart": "2019-01-01",
+          "dateOfEnd": "2021-01-01",
+          "position": "Frontend Developer",
+          "description": "Developed and maintained web interfaces."
+        },
+        {
+          "companyName": "UVW Ltd",
+          "dateOfStart": "2016-01-01",
+          "dateOfEnd": "2018-12-31",
+          "position": "Intern Developer",
+          "description": "Assisted in the development of frontend components."
+        }
+      ],
+      "certificates": [
+        {
+          "name": "Certified JavaScript Developer",
+          "certificateDate": "2019-08-01",
+          "description": "Certification for JavaScript development.",
+          "achievementStatus": true
+        },
+        {
+          "name": "Certified React Developer",
+          "certificateDate": "2020-03-01",
+          "description": "Certification for React development.",
+          "achievementStatus": true
+        }
+      ]
+    },
+    {
+      "baseUser": {
+        "firstName": "Berkay",
+        "lastName": "Taşel",
+        "email": "berkaytasel@hotmail.com",
+        "phoneNumber": "+905555555555",
+        "gender": "Male",
+        "dateOfBirth": "1994-03-03",
+        "image": "/src/assets/images/employeeerkek.jpg",
+        "address": "Çankaya, Ankara, Turkey"
+      },
+      "candidate": {
+        "workingStatus": "Working",
+        "applications": 3
+      },
+      "experiences": [
+        {
+          "companyName": "GHI Co",
+          "dateOfStart": "2017-01-01",
+          "dateOfEnd": "2019-01-01",
+          "position": "Backend Developer",
+          "description": "Developed and maintained server-side applications."
+        },
+        {
+          "companyName": "JKL Ltd",
+          "dateOfStart": "2015-01-01",
+          "dateOfEnd": "2016-12-31",
+          "position": "Intern Developer",
+          "description": "Assisted in backend development."
+        }
+      ],
+      "certificates": [
+        {
+          "name": "Certified Python Developer",
+          "certificateDate": "2018-05-01",
+          "description": "Certification for Python development.",
+          "achievementStatus": true
+        },
+        {
+          "name": "Certified AWS Developer",
+          "certificateDate": "2019-11-01",
+          "description": "Certification for AWS development.",
+          "achievementStatus": true
+        }
+      ]
+    }
+  ]
+}
